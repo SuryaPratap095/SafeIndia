@@ -19,11 +19,11 @@ public class HomeTab extends AppCompatActivity implements TabLayout.OnTabSelecte
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
 
-        tabLayout=(TabLayout)findViewById(R.id.toolBar);
+        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Contacts Tab selected"));
-        tabLayout.addTab(tabLayout.newTab().setText("Friends Tab selected"));
-        tabLayout.addTab(tabLayout.newTab().setText("Maps Tab selected"));
+        tabLayout.addTab(tabLayout.newTab().setText("Contacts"));
+        tabLayout.addTab(tabLayout.newTab().setText("Friends"));
+        tabLayout.addTab(tabLayout.newTab().setText("Maps"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         viewPager=(ViewPager)findViewById(R.id.pager);
