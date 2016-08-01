@@ -26,8 +26,9 @@ public class Pager extends FragmentStatePagerAdapter {
             case 1:
                 FriendsTab friendsTab = new FriendsTab();
                 return friendsTab;
-            case 2:
-                MapTab mapTab = new MapTab();
+           case 2:
+                MapTab mapTab=new MapTab();
+              // Fragment mapFragment=(Fragment)mapTab;
                 return mapTab;
             default:
                 return null;

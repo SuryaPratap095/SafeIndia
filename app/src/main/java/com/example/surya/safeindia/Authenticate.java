@@ -24,6 +24,7 @@ public class Authenticate extends Application {
     private AuthCallback authCallback;
     private static final String TWITTER_KEY = "2cmsXIUANsuC3B8aS0VJp6dUY";
     private static final String TWITTER_SECRET = "SX6YmIqxULTARRY5WihaBQnJ76QnlDmXGGCOC8gNw0LPvndVbQ";
+    public static String phone;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -48,10 +49,10 @@ public class Authenticate extends Application {
                 
 
               //  Digits.authenticate(digitsAuthConfig);
-//                  Intent intent=new Intent(Authenticate.this,MapActivity.class);
+                // Intent intent=new Intent(Authenticate.this,MapActivity.class);
 //                   Authenticate.this.startActivity(intent);
                 //Digits.authenticate(authCallback,phoneNumber);
-
+                    phone=phoneNumber;
                 Toast.makeText(getApplicationContext(),"Number is: "+phoneNumber,Toast.LENGTH_LONG).show();
                // Digits.authenticate(digitsAuthConfig);
                // Intent intent=new Intent(authConfig.this)

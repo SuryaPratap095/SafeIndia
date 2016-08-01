@@ -16,6 +16,7 @@ public class HomeTab extends AppCompatActivity implements TabLayout.OnTabSelecte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_tab);
+
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
 
