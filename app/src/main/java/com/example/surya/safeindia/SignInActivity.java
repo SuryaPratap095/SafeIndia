@@ -17,29 +17,15 @@ public class SignInActivity extends AppCompatActivity {
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
     private static final String TWITTER_KEY = "2cmsXIUANsuC3B8aS0VJp6dUY";
     private static final String TWITTER_SECRET = "SX6YmIqxULTARRY5WihaBQnJ76QnlDmXGGCOC8gNw0LPvndVbQ";
-    private static final String MYPREFERENCES="FirstSigninPref";
 
-    private SharedPreferences preferences;
-    private SharedPreferences.Editor editor;
-
-    public static boolean Activityaccess=false;
     DigitsAuthButton digitsAuthButton;
 
-
+    public static boolean Activityaccess=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        preferences=getApplicationContext().getSharedPreferences(MYPREFERENCES,MODE_PRIVATE);
-         editor=preferences.edit();
-        editor.putBoolean("FirstSignIN",true);
-        editor.commit();
 
-        if(preferences.getBoolean("FirstSignIN",true))
-        {
-            Intent intent=new Intent(this,MapsActivity.class);
-            this.startActivity(intent);
-        }
 
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new TwitterCore(authConfig), new Digits());
@@ -67,9 +53,12 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        Intent intent=new Intent(this,MapsActivity.class);
-        this.startActivity(intent);
-        editor.putBoolean("FirstSignIN",false);
-        editor.commit();
+        if(Authenticate.phone!=null) {
+
+            Intent intent = new Intent(this,UserForm.class);
+            this.startActivity(intent);
+            splashScreen.setDefault("FirstName",true,this);
+            SignInActivity.this.finish();
+        }
     }
 }

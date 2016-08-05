@@ -2,6 +2,7 @@ package com.example.surya.safeindia;
 
 import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -21,10 +22,15 @@ import io.fabric.sdk.android.Fabric;
 public class Authenticate extends Application {
 
 
+
+
+
+    public static boolean Activityaccess=false;
+
     private AuthCallback authCallback;
     private static final String TWITTER_KEY = "2cmsXIUANsuC3B8aS0VJp6dUY";
     private static final String TWITTER_SECRET = "SX6YmIqxULTARRY5WihaBQnJ76QnlDmXGGCOC8gNw0LPvndVbQ";
-    public static String phone;
+    public static String phone=null;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -32,12 +38,17 @@ public class Authenticate extends Application {
         Fabric.with(this,new TwitterCore(authConfig),new Digits());
         final DigitsAuthConfig digitsAuthConfig;
 
+//        preferences=getApplicationContext().getSharedPreferences(MYPREFERENCES,MODE_PRIVATE);
+//        editor=preferences.edit();
+//        editor.putBoolean("FirstSignIN",true);
+//        editor.commit();
+
         authCallback=new AuthCallback() {
 
             @Override
             public void success(DigitsSession session, String phoneNumber) {
               //   digitsAuthConfig=new DigitsAuthConfig(false,phoneNumber,null,null,null,null);
-                String number=phoneNumber;
+               // String number=phoneNumber;
                 Log.d("Authenticate:::",phoneNumber.toString());
 
                 if(session.isLoggedOutUser());
@@ -46,7 +57,10 @@ public class Authenticate extends Application {
                 if(session.isValidUser())
                     Log.d("Is Valid User",phoneNumber.toString());
 
-                
+
+
+               // splashScreen.sharedPreferences.Editor editor=sharedPreferences.edit();
+               // SharedPreferences.editor
 
               //  Digits.authenticate(digitsAuthConfig);
                 // Intent intent=new Intent(Authenticate.this,MapActivity.class);
