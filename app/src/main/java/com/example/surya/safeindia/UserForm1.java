@@ -192,7 +192,7 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.contains("");
     }
 
     private boolean isPasswordValid(String password) {

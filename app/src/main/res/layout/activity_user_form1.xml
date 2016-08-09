@@ -39,7 +39,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
 
@@ -57,15 +56,38 @@
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
+            <RadioGroup
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maleradiobtn"
+                    android:text="Male"
+
+                    />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/femaleradiobtn"
+                    android:text="Female"
+                    />
+
+            </RadioGroup>
+
             <LinearLayout android:id="@+id/btnlayout"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
@@ -75,12 +97,13 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
-                    <Button android:id="@+id/cancelbtn"
-                    style="?android:textAppearanceSmall"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:text="@string/action_cancel"
-                    android:textStyle="bold"
+            <Button android:id="@+id/cancelbtn"
+                style="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/action_cancel"
+                android:textStyle="bold"
                     />
                 </LinearLayout>
 

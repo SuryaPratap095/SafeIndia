@@ -55,7 +55,7 @@ public class SignInActivity extends AppCompatActivity {
         super.onRestart();
         if(Authenticate.phone!=null) {
 
-            Intent intent = new Intent(this,UserForm.class);
+            Intent intent = new Intent(this,UserForm1.class);
             this.startActivity(intent);
             splashScreen.setDefault("FirstName",true,this);
             SignInActivity.this.finish();
