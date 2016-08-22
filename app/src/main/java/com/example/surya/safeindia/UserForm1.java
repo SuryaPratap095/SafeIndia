@@ -146,6 +146,7 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
      */
     private void attemptLogin() {
         if (mAuthTask != null) {
+
             Toast.makeText(this,"Login in DB", Toast.LENGTH_LONG).show();
             return;
         }
