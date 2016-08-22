@@ -36,9 +36,17 @@ public class splashScreen extends AppCompatActivity {
             },SPLASH_TIME_OUT);
         }
         else {
-            Intent intent = new Intent(splashScreen.this, UserForm1.class);
-            splashScreen.this.startActivity(intent);
-            splashScreen.this.finish();
+           new Handler().postDelayed(new Runnable() {
+               @Override
+               public void run() {
+
+                   Intent intent = new Intent(splashScreen.this, UserForm1.class);
+                   splashScreen.this.startActivity(intent);
+                   splashScreen.this.finish();
+
+               }
+           },SPLASH_TIME_OUT);
+
 
         }
     }

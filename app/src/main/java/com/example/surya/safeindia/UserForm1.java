@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -145,6 +146,7 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
      */
     private void attemptLogin() {
         if (mAuthTask != null) {
+            Toast.makeText(this,"Login in DB", Toast.LENGTH_LONG).show();
             return;
         }
 
