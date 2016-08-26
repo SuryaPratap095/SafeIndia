@@ -35,7 +35,6 @@ public class JSONParser {
 
         StringBuilder sb=new StringBuilder();
 
-
         try{
 
             url=new URL(requestURL);
