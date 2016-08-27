@@ -11,6 +11,8 @@
     tools:context="com.example.surya.safeindia.UserForm1">
 
     <!-- Login progress -->
+
+
     <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
@@ -81,7 +83,15 @@
                     android:text="Female"
                     />
 
+
+
             </RadioGroup>
+
+
+            <EditText android:id="@+id/dateDob"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
 
             <LinearLayout android:id="@+id/btnlayout"
                 android:layout_height="wrap_content"
@@ -105,7 +115,9 @@
                 android:text="@string/action_cancel"
                 android:textStyle="bold"
                     />
-                </LinearLayout>
+
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
