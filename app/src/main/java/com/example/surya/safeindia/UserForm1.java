@@ -359,9 +359,8 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
     }
 
     public void showDatePickerDialog() {
-
-        DialogFragment dialogFragment=new DatePickerFragment(mdatePicker);
-       //dialogFragment.show(getSupportFragmentManager(),"datePicker");
+        android.support.v4.app.DialogFragment dialogFragment=new DatePickerFragment();
+       dialogFragment.show(getSupportFragmentManager(),"datePicker");
 
     }
 
@@ -431,38 +430,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
             mAuthTask = null;
             showProgress(false);
         }
-    }
-
-    public static class DatePickerFragment extends DialogFragment implements
-            DatePickerDialog.OnDateSetListener {
-
-
-        public DatePickerFragment(){
-
-        }
-
-        private EditText activity_edittext;
-        @SuppressLint("ValidFragment")
-        public DatePickerFragment(EditText editText){
-            activity_edittext = editText;
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            final Calendar calendar = Calendar.getInstance();
-
-            int year = calendar.get(Calendar.YEAR);
-            int month = calendar.get(Calendar.MONTH);
-            int day = calendar.get(Calendar.DATE);
-            return new DatePickerDialog(getActivity(), this, year, month, day);
-        }
-
-        @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                activity_edittext.setText(String.valueOf(dayOfMonth ) + "/" +   String.valueOf(monthOfYear + 1) + "/" + String.valueOf(year));
-        }
-
-
     }
 
 
