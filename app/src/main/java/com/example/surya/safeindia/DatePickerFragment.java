@@ -7,6 +7,9 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
@@ -20,9 +23,10 @@ public class DatePickerFragment extends android.support.v4.app.DialogFragment im
     }
 
     private EditText activity_edittext;
+    private TextView mtextView;
     @SuppressLint("ValidFragment")
-    public DatePickerFragment(EditText editText){
-        activity_edittext = editText;
+    public DatePickerFragment(TextView editText){
+        mtextView = editText;
     }
 
     @Override
@@ -37,7 +41,7 @@ public class DatePickerFragment extends android.support.v4.app.DialogFragment im
 
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-        activity_edittext.setText(String.valueOf(dayOfMonth ) + "/" +   String.valueOf(monthOfYear + 1) + "/" + String.valueOf(year));
+        mtextView.setText(String.valueOf(dayOfMonth ) + "/" +   String.valueOf(monthOfYear + 1) + "/" + String.valueOf(year));
     }
 
 }

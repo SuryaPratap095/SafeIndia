@@ -78,6 +78,7 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
     private View mProgressView;
     private View mLoginFormView;
     private  EditText mdatePicker;
+    private TextView mdateText;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -104,8 +105,8 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
             }
         });
 
-        mdatePicker = (EditText) findViewById(R.id.dateDob);
-        mdatePicker.setOnClickListener(new OnClickListener() {
+        mdateText = (TextView) findViewById(R.id.dateDob);
+        mdateText.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -359,7 +360,8 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
     }
 
     public void showDatePickerDialog() {
-        android.support.v4.app.DialogFragment dialogFragment=new DatePickerFragment();
+
+        android.support.v4.app.DialogFragment dialogFragment=new DatePickerFragment(mdateText);
        dialogFragment.show(getSupportFragmentManager(),"datePicker");
 
     }
