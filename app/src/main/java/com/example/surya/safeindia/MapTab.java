@@ -20,7 +20,6 @@ public class MapTab extends android.support.v4.app.Fragment implements OnMapRead
     private GoogleMap mMap;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.maps_tab_layout);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
