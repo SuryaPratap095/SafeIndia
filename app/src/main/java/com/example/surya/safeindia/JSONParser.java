@@ -36,7 +36,6 @@ public class JSONParser {
         StringBuilder sb=new StringBuilder();
 
         try{
-
             url=new URL(requestURL);
             HttpURLConnection connection=(HttpURLConnection) url.openConnection();
             connection.setReadTimeout(15000);
