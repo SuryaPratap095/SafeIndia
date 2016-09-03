@@ -127,8 +127,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-
-
     }
 
     private void populateAutoComplete() {
