@@ -103,7 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
                 dialog.show();
                 // no network provider is enabled
-                Log.e("Current Location", "Current Lat Lng is Null");
+               Log.e("Current Location", "Current Lat Lng is Null");
             }
             else
             {

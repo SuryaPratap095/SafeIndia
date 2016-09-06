@@ -297,7 +297,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
             emails.add(cursor.getString(ProfileQuery.ADDRESS));
             cursor.moveToNext();
         }
-
         addEmailsToAutoComplete(emails);
     }
 
