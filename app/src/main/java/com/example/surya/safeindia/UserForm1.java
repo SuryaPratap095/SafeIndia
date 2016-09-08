@@ -135,7 +135,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
 
         getLoaderManager().initLoader(0, null, this);
     }
-
     private boolean mayRequestContacts() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
