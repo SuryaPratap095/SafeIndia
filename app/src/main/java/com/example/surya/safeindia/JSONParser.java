@@ -81,7 +81,6 @@ public class JSONParser {
             while(bufferedReader.readLine()!=null){
                 response=bufferedReader.readLine();
                 sb.append(response+"\n");
-
             }
 
         }catch (Exception ex){
