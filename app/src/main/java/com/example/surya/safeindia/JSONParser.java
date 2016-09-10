@@ -96,7 +96,6 @@ public class JSONParser {
             URL url=new URL(requestURL+id);
             HttpURLConnection connection=(HttpURLConnection) url.openConnection();
             BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
             String response;
 
             while(bufferedReader.readLine()!=null){
