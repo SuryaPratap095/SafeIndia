@@ -39,6 +39,9 @@ import android.widget.Toast;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -388,6 +391,17 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
 
             try {
                 // Simulate network access.
+                StringRequest stringRequest=new StringRequest(config.URL_USER, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        showJSON(response);
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(UserForm1.this,error.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                });
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 return false;
@@ -403,6 +417,12 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
 
             // TODO: register the new account here.
             return true;
+        }
+
+        private void showJSON(String json){
+            JSONParser jsonParser=new JSONParser();
+            //jsonParser.parse
+
         }
 
         @Override
