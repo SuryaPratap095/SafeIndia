@@ -25,8 +25,8 @@ public class JSONParser {
     static JSONObject jobj=null;
     static String JSON="";
 
-    public JSONParser(){
-
+    public JSONParser(String json){
+        this.JSON=json;
     }
 
     public String sendPostRequest(String requestURL, HashMap<String,String> postDataParams){

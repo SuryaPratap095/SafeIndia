@@ -25,6 +25,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,9 +40,12 @@ import android.widget.Toast;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -49,7 +53,11 @@ import com.google.android.gms.common.server.converter.StringToIntConverter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import com.example.surya.safeindia.config;
+
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -394,14 +402,33 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
                 StringRequest stringRequest=new StringRequest(config.URL_USER, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        showJSON(response);
+                        if (response.trim().equals("success"))
+                            showJSON(response);
+                        else {
+                            Toast.makeText(UserForm1.this, response, Toast.LENGTH_LONG).show();
+                        }
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(UserForm1.this,error.getMessage(),Toast.LENGTH_LONG).show();
+                        Log.d(error.getMessage(),"Error");
                     }
-                });
+                }){
+                    protected Map<String, String> getParams()throws AuthFailureError{
+                        Map<String, String> map=new HashMap<String, String>();
+                        map.put(config.KEY_PHONE,"8952979627");
+                        map.put(config.Key_FIRSTNAME,mEmail);
+                        map.put(config.KEY_LASTNAME,mPassword);
+                        map.put(config.KEY_GENDER,"M");
+                        map.put(config.Key_DOB,"1992-09-09");
+                        return map;
+                    }
+                };
+
+                RequestQueue requestQueue= Volley.newRequestQueue(UserForm1.this);
+                requestQueue.add(stringRequest);
+
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 return false;
@@ -420,7 +447,9 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
         }
 
         private void showJSON(String json){
-            JSONParser jsonParser=new JSONParser();
+            JSONParser jsonParser=new JSONParser(json);
+            Toast.makeText(UserForm1.this, "Successfull Login", Toast.LENGTH_LONG).show();
+
             //jsonParser.parse
 
         }
