@@ -417,11 +417,11 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
                 }){
                     protected Map<String, String> getParams()throws AuthFailureError{
                         Map<String, String> map=new HashMap<String, String>();
-                        map.put(config.KEY_PHONE,"8952979627");
-                        map.put(config.Key_FIRSTNAME,mEmail);
-                        map.put(config.KEY_LASTNAME,mPassword);
-                        map.put(config.KEY_GENDER,"M");
-                        map.put(config.Key_DOB,"1992-09-09");
+                        map.put("phone_num","8952979627");
+                        map.put("first_name","Shashank");
+                        map.put("last_name","Gupta");
+                        map.put("gender","M");
+                        map.put("DOB","1992-09-09");
                         return map;
                     }
                 };

@@ -5,7 +5,7 @@ package com.example.surya.safeindia;
  */
 public class config {
 
-    public static String URL_USER="http://safetrk.esy.es/save_user.php";
+    public static String URL_USER="http://www.safetrk.esy.es/save_user.php/save_user.php";
 
     public static final String KEY_PHONE="phone_num";
     public static final String Key_FIRSTNAME="first_name";
