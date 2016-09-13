@@ -41,6 +41,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -399,7 +400,7 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
 
             try {
                 // Simulate network access.
-                StringRequest stringRequest=new StringRequest(config.URL_USER, new Response.Listener<String>() {
+                StringRequest stringRequest=new StringRequest(Request.Method.POST,config.URL_USER, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if (response.trim().equals("success"))
@@ -415,13 +416,14 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
                         Log.d(error.getMessage(),"Error");
                     }
                 }){
-                    protected Map<String, String> getParams()throws AuthFailureError{
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> map=new HashMap<String, String>();
-                        map.put("phone_num","8952979627");
-                        map.put("first_name","Shashank");
-                        map.put("last_name","Gupta");
+                        map.put("phone_num","9929856746");
+                        map.put("first_name","Surya");
+                        map.put("last_name","Pratap");
                         map.put("gender","M");
-                        map.put("DOB","1992-09-09");
+                        map.put("DOB","1992-06-06");
                         return map;
                     }
                 };
