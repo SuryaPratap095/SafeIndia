@@ -361,7 +361,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
-
     public void showDatePickerDialog() {
 
         android.support.v4.app.DialogFragment dialogFragment=new DatePickerFragment(mdateText);
