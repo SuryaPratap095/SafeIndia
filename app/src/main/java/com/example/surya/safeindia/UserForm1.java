@@ -83,7 +83,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
      * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
-
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
