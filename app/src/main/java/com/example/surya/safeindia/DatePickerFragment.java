@@ -21,7 +21,6 @@ public class DatePickerFragment extends android.support.v4.app.DialogFragment im
     public DatePickerFragment(){
 
     }
-
     private EditText activity_edittext;
     private TextView mtextView;
     @SuppressLint("ValidFragment")

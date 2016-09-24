@@ -343,7 +343,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
     @Override
     public void onStop() {
         super.onStop();
-
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         Action viewAction = Action.newAction(
