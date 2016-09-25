@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import org.w3c.dom.Text;
 
 import java.util.Calendar;
@@ -27,7 +26,6 @@ public class DatePickerFragment extends android.support.v4.app.DialogFragment im
     public DatePickerFragment(TextView editText){
         mtextView = editText;
     }
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Calendar calendar = Calendar.getInstance();
