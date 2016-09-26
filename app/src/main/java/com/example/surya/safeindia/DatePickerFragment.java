@@ -34,7 +34,6 @@ public class DatePickerFragment extends android.support.v4.app.DialogFragment im
         int day = calendar.get(Calendar.DATE);
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
-
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
         mtextView.setText(String.valueOf(dayOfMonth ) + "/" +   String.valueOf(monthOfYear + 1) + "/" + String.valueOf(year));
