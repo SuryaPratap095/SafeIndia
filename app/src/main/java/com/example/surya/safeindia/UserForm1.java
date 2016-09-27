@@ -165,7 +165,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
         }
         return false;
     }
-
     /**
      * Callback received when a permissions request has been completed.
      */
