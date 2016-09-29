@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.digits.sdk.android.AuthCallback;
 import com.digits.sdk.android.Digits;
-import com.digits.sdk.android.DigitsAuthConfig;
+//import com.digits.sdk.android.DigitsAuthConfig;
 import com.digits.sdk.android.DigitsException;
 import com.digits.sdk.android.DigitsSession;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
@@ -34,9 +34,9 @@ public class Authenticate extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        final TwitterAuthConfig authConfig=new TwitterAuthConfig(TWITTER_KEY,TWITTER_SECRET);
-        Fabric.with(this,new TwitterCore(authConfig),new Digits());
-        final DigitsAuthConfig digitsAuthConfig;
+//        final TwitterAuthConfig authConfig=new TwitterAuthConfig(TWITTER_KEY,TWITTER_SECRET);
+//        Fabric.with(this, new TwitterCore(authConfig), new Digits(), new Digits.Builder().build() new TwitterCore(authConfig),new Digits());
+//        final DigitsAuthConfig digitsAuthConfig;
 
 //        preferences=getApplicationContext().getSharedPreferences(MYPREFERENCES,MODE_PRIVATE);
 //        editor=preferences.edit();
@@ -51,7 +51,7 @@ public class Authenticate extends Application {
                // String number=phoneNumber;
                 Log.d("Authenticate:::",phoneNumber.toString());
 
-                if(session.isLoggedOutUser());
+       //         if(session.isLoggedOutUser());
                     Log.d("Real user",phoneNumber.toString());
 
                 if(session.isValidUser())
@@ -66,7 +66,7 @@ public class Authenticate extends Application {
                 // Intent intent=new Intent(Authenticate.this,MapActivity.class);
 //                   Authenticate.this.startActivity(intent);
                 //Digits.authenticate(authCallback,phoneNumber);
-                    phone=phoneNumber;
+                   // phone=phoneNumber;
                 Toast.makeText(getApplicationContext(),"Number is: "+phoneNumber,Toast.LENGTH_LONG).show();
                // Digits.authenticate(digitsAuthConfig);
                // Intent intent=new Intent(authConfig.this)
