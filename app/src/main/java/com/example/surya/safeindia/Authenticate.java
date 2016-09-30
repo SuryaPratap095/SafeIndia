@@ -44,7 +44,6 @@ public class Authenticate extends Application {
 //        editor.commit();
 
         authCallback=new AuthCallback() {
-
             @Override
             public void success(DigitsSession session, String phoneNumber) {
               //   digitsAuthConfig=new DigitsAuthConfig(false,phoneNumber,null,null,null,null);
