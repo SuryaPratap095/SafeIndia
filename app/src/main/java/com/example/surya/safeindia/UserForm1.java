@@ -137,7 +137,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
     }
-
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
