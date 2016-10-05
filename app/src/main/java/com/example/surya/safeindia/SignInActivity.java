@@ -53,9 +53,6 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         if(Activityaccess){
             Intent intent=new Intent(SignInActivity.this,MapsActivity.class);
             SignInActivity.this.startActivity(intent);
