@@ -37,7 +37,6 @@ public class SignInActivity extends AppCompatActivity {
 //         digitsAuthButton=(DigitsAuthButton) findViewById(R.id.authButton);
 //        digitsAuthButton.setCallback(((Authenticate)getApplication()).getAuthCallback());
 
-
         DigitsAuthButton digitsButton = (DigitsAuthButton) findViewById(R.id.auth_button);
         digitsButton.setCallback(new AuthCallback() {
             @Override
