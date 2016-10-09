@@ -43,7 +43,6 @@ public class splashScreen extends AppCompatActivity {
                    Intent intent = new Intent(splashScreen.this,UserForm1.class);
                    splashScreen.this.startActivity(intent);
                    splashScreen.this.finish();
-
                }
            },SPLASH_TIME_OUT);
 

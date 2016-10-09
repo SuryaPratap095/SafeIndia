@@ -51,7 +51,6 @@ public class SignInActivity extends AppCompatActivity {
                 Log.d("Digits", "Sign in with Digits failure", exception);
             }
         });
-
         if(Activityaccess){
             Intent intent=new Intent(SignInActivity.this,MapsActivity.class);
             SignInActivity.this.startActivity(intent);
