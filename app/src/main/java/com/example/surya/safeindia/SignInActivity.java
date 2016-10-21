@@ -58,7 +58,6 @@ public class SignInActivity extends AppCompatActivity {
         }
      //   AuthCallback authCallback=((Authenticate) getApplication()).getAuthCallback();
 
-
 //        Intent intent=new Intent(SignInActivity.this,MapActivity.class);
 //        SignInActivity.this.startActivity(intent);
 

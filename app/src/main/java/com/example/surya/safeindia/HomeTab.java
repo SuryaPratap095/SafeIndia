@@ -19,7 +19,6 @@ public class HomeTab extends AppCompatActivity implements TabLayout.OnTabSelecte
 
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
-
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
 
         tabLayout.addTab(tabLayout.newTab().setText("Contacts"));
