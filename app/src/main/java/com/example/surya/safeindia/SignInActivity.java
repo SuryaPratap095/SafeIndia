@@ -45,7 +45,6 @@ public class SignInActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Authentication successful for "
                         + phoneNumber, Toast.LENGTH_LONG).show();
             }
-
             @Override
             public void failure(DigitsException exception) {
                 Log.d("Digits", "Sign in with Digits failure", exception);
