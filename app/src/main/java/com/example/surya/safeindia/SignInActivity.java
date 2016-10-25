@@ -29,7 +29,6 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
 //        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
 //        Fabric.with(this, new TwitterCore(authConfig), new Digits());
 //        setContentView(R.layout.activity_sign_in);
