@@ -362,8 +362,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
        dialogFragment.show(getSupportFragmentManager(),"datePicker");
 
     }
-    
-
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
