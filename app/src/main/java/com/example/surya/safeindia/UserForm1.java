@@ -276,7 +276,6 @@ public class UserForm1 extends AppCompatActivity implements LoaderCallbacks<Curs
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
     }
-
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         return new CursorLoader(this,
